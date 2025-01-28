@@ -25,11 +25,9 @@ if latest_file:
     df = pd.read_csv(latest_file)
 
     # Symbolカラムを文字列型に変換
-        if 'Symbol' in df.columns:
-            df['Symbol'] = df['Symbol'].astype(str)
+    if 'Symbol' in df.columns:
+        df['Symbol'] = df['Symbol'].astype(str)
     
-        st.dataframe(df)
-
     st.dataframe(df)
     st.success(f"表示中のファイル: {os.path.basename(latest_file)}")
 else:
