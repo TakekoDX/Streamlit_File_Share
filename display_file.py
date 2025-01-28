@@ -23,6 +23,13 @@ latest_file = get_latest_file(RESULT_DIR, FILE_PATTERN)
 if latest_file:
     st.subheader("最新のスクリーニング結果")
     df = pd.read_csv(latest_file)
+
+    # Symbolカラムを文字列型に変換
+        if 'Symbol' in df.columns:
+            df['Symbol'] = df['Symbol'].astype(str)
+    
+        st.dataframe(df)
+
     st.dataframe(df)
     st.success(f"表示中のファイル: {os.path.basename(latest_file)}")
 else:
