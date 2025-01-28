@@ -28,6 +28,9 @@ if latest_file:
     if 'Symbol' in df.columns:
         df['Symbol'] = df['Symbol'].astype(str)
     
+    # インデックスをリセットして表示
+    df = df.reset_index(drop=True)
+
     st.dataframe(df)
     st.success(f"表示中のファイル: {os.path.basename(latest_file)}")
 else:
