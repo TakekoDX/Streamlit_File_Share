@@ -6,7 +6,7 @@ import glob
 # ディレクトリとファイルの形式
 RESULT_DIR = "data"
 FILE_PATTERN = "screened_stocks_*.csv"  # ワイルドカードでマッチするファイル形式
-FILE_PATTERN_US = "screened_stocks_us_*.csv"  # ワイルドカードでマッチするファイル形式
+FILE_PATTERN_US = "us_screened_stocks_*.csv"  # ワイルドカードでマッチするファイル形式
 
 st.title("スクリーニング結果")
 
